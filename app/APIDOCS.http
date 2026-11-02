@@ -1,0 +1,63 @@
+
+### Get All Events
+GET http://127.0.0.1:8000/events/
+Accept: application/json
+
+
+### Add Event
+POST http://127.0.0.1:8000/events/
+Content-Type: application/json
+
+{
+    "event_name": "BIRTHDAY PARTY",
+    "description": "Prepare for BDAY PARTY",
+    "event_date": "2026-11-23",
+    "event_time": "10:00:00",
+    "location": "GEE BEE PALACE",
+    "category": "BDAY",
+    "reminder_date": "2026-11-20",
+    "reminder_time": "07:00:00",
+    "is_completed": false
+}
+
+
+### Get Event Details
+GET http://127.0.0.1:8000/events/1/
+
+
+### Update Event
+PUT http://127.0.0.1:8000/events/1/
+Content-Type: application/json
+
+{
+    "event_name": "Python Exam",
+    "description": "Updated exam preparation",
+    "event_date": "2026-11-10",
+    "event_time": "10:00:00",
+    "location": "College",
+    "category": "Exam",
+    "reminder_date": "2026-11-09",
+    "reminder_time": "09:00:00",
+    "is_completed": false
+}
+
+
+### Pending Events
+GET http://127.0.0.1:8000/events/pending/
+
+
+### Completed Events
+GET http://127.0.0.1:8000/events/completed/
+
+
+### Upcoming Events
+GET http://127.0.0.1:8000/events/upcoming/
+
+
+### Mark Event Completed
+PATCH http://127.0.0.1:8000/events/1/mark_completed/
+
+
+### Delete Event
+DELETE http://127.0.0.1:8000/events/1/
+
